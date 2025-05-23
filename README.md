@@ -128,10 +128,7 @@ Enjoy the system. **R1nzox is passion , Only for YOU**  🚨
 
 ## STATS 
 
-## 📊 GitHub Clone Stats
+![Clones](https://raw.githubusercontent.com/R1nZox-dev/r1-smart-alert/main/stats/clones.svg)
 
-## 📊 GitHub Clone Stats
-
-![Clones](https://raw.githubusercontent.com/R1nZox-dev/r1-smart-alert/stats/clones.svg)
 
 
