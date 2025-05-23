@@ -2,7 +2,7 @@ name: Generate Clone Stats Badge
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # every day
   workflow_dispatch:
 
 jobs:
@@ -17,11 +17,11 @@ jobs:
         with:
           github-token: ${{ secrets.GH_PAT }}
           script: |
-            const result = await github.rest.repos.getClones({
+            const res = await github.rest.repos.getClones({
               owner: context.repo.owner,
               repo: context.repo.repo
             });
-            return result.data;
+            return res.data;
 
       - name: Generate Badge
         run: |
