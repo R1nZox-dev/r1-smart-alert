@@ -3,7 +3,6 @@
 A Smart shooting Alert  system for FiveM that integrates with Google's **Gemini AI** 🤖 to analyze mugshots of unmasked shooters and generate **realistic facial descriptions** 🧑‍💼. Built for role-play realism, smart NPC detection, and performance 🧠.
 
 ⚠️ IMPORTANT: Since the mugshot image is sent as a small base64 string, Gemini 1.5 Flash does a surprisingly good job describing the face — but it may still struggle with perfect accuracy in some edge cases. This will improve in future versions as optimization and image input quality get better.
----
 
 ## 📦 Installation
 
