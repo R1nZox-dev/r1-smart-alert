@@ -2,7 +2,7 @@ name: GitHub Clone Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Every day
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,26 +23,17 @@ jobs:
             });
             return res.data;
 
-      - name: Save data and generate chart
+      - name: Save JSON file
         run: |
           mkdir -p stats
           echo '${{ steps.traffic.outputs.result }}' > stats/clones.json
-          python3 -c "
-import json, urllib.parse
-data = json.load(open('stats/clones.json'))
-chart = {
-  'type': 'line',
-  'data': {
-    'labels': [f'Day {i+1}' for i in range(len(data.get('clones', [])))],
-    'datasets': [{
-      'label': 'Clones',
-      'data': [c['count'] for c in data.get('clones', [])]
-    }]
-  }
-}
-url = 'https://quickchart.io/chart?c=' + urllib.parse.quote(json.dumps(chart))
-with open('stats/chart.md', 'w') as f: f.write(f'![Clones Chart]({url})')
-"
+
+      - name: Install Python and generate chart
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3 python3-pip
+          pip3 install requests
+          python3 generate_chart.py
 
       - name: Commit chart
         run: |
@@ -50,4 +41,4 @@ with open('stats/chart.md', 'w') as f: f.write(f'![Clones Chart]({url})')
           git config user.email github-actions@github.com
           git add stats/
           git commit -m "Update traffic chart"
-          git push || echo "No changes to commit"
+          git push || echo "No changes"
