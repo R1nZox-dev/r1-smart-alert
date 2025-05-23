@@ -1,37 +1,37 @@
-name: Clone Stats Badge
+name: Generate Clone Stats Badge
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Once a day
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get clone stats
-        id: getclones
+      - name: Get Clone Data
+        id: clones
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const res = await github.rest.repos.getClones({
+            const result = await github.rest.repos.getClones({
               owner: context.repo.owner,
               repo: context.repo.repo
             });
-            return res.data;
+            return result.data;
 
-      - name: Generate badge SVG
+      - name: Generate Badge
         run: |
           mkdir -p stats
-          echo '<svg xmlns="http://www.w3.org/2000/svg" width="150" height="20"><rect width="150" height="20" fill="#555"/><rect x="60" width="90" height="20" fill="#4c1"/><text x="30" y="14" fill="#fff" font-family="Verdana" font-size="11">Clones</text><text x="65" y="14" fill="#fff" font-family="Verdana" font-size="11">${{ fromJSON(steps.getclones.outputs.result).count }} (14d)</text></svg>' > stats/clones.svg
+          echo '<svg xmlns="http://www.w3.org/2000/svg" width="160" height="20"><rect width="160" height="20" fill="#555"/><rect x="65" width="95" height="20" fill="#4c1"/><text x="10" y="14" fill="#fff" font-family="Verdana" font-size="11">Clones</text><text x="70" y="14" fill="#fff" font-family="Verdana" font-size="11">'${{ fromJSON(steps.clones.outputs.result).count }}' (14d)</text></svg>' > stats/clones.svg
 
-      - name: Commit badge
+      - name: Commit Badge
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add stats/clones.svg
-          git commit -m "Update clone stats badge"
+          git commit -m "Update clone badge"
           git push || echo "No changes"
