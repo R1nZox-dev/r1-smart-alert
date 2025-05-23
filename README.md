@@ -125,3 +125,13 @@ AI services are becoming paid — so I'll provide a **self-hosted alternative** 
 ---
 
 Enjoy the system. **R1nzox is passion , Only for YOU**  🚨
+
+## STATS 
+
+## 📊 GitHub Clone Stats
+
+[See clone stats](stats/chart.md)
+
+<!-- This image will update daily -->
+![Clones Chart](https://raw.githubusercontent.com/R1nZox-dev/r1-smart-alert/main/stats/chart.md)
+
