@@ -44,8 +44,8 @@ A Smart shooting Alert  system for FiveM that integrates with Google's **Gemini 
 ## 📚 Requirements
 * goth girl 
 * Brain 
-* [Gemini-API-access]  (https://ai.google.dev/gemini-api/docs/api-key)
-* [MugShotBase64] (https://github.com/BaziForYou/MugShotBase64)
+* [Gemini-API-access](https://ai.google.dev/gemini-api/docs/api-key)
+* [MugShotBase64](https://github.com/BaziForYou/MugShotBase64)
 * [ps-dispatch](https://github.com/Project-Sloth/ps-dispatch) or another alert system
 
 ---
