@@ -105,7 +105,7 @@ Config.AIPrompts = {
 
 >⚠️ As AI platforms like Gemini may become fully paid in the future, I plan to release a version using a home-hosted AI model. It won't match Gemini's quality, but it'll be a functional free alternative for basic RP scenarios.
 
->❌ Do not sell or publish "inspired" versions of this script — especially if the core logic is simple.
+>❌ Do not sell "inspired" versions of this script — especially if the core logic is simple.
 >⭐ For support, just star this GitHub repository. If you're building something better, please give credit.
 >💬 For updates, suggestions, or issues — contact me directly on Discord: @ice4ice
 
