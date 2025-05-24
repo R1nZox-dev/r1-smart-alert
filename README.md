@@ -1,3 +1,6 @@
+[![GitHub Clones](https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/R1nZox-dev/4914ea1cde6397b8fc94091b5e38540f/raw/clone.json&logo=github)](https://github.com/MShawon/github-clone-count-badge)
+
+
 # 🚨 Smart shooting Alert 
 
 A Smart shooting Alert  system for FiveM that integrates with Google's **Gemini AI** 🤖 to analyze mugshots of unmasked shooters and generate **realistic facial descriptions** 🧑‍💼. Built for role-play realism, smart NPC detection, and performance 🧠.
@@ -126,9 +129,6 @@ AI services are becoming paid — so I'll provide a **self-hosted alternative** 
 
 Enjoy the system. **R1nzox is passion , Only for YOU**  🚨
 
-## STATS 
-
-![Clones](https://raw.githubusercontent.com/R1nZox-dev/r1-smart-alert/main/stats/clones.svg)
 
 
 
