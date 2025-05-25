@@ -2,6 +2,7 @@
 
 
 # 🚨 Smart shooting Alert 
+.
 
 A Smart shooting Alert  system for FiveM that integrates with Google's **Gemini AI** 🤖 to analyze mugshots of unmasked shooters and generate **realistic facial descriptions** 🧑‍💼. Built for role-play realism, smart NPC detection, and performance 🧠.
 
