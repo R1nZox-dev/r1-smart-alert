@@ -90,6 +90,8 @@ Config.AIPrompts = {
     ["dutch"] = "Beschrijf kenmerken: huid, gezicht, haar, baard, hoed, bril, kleding, accessoires. Begin met \"Het individu is\" of \"heeft\". Max. 175 tekens.",
     ["swedish"] = "Beskriv synliga drag: hud, ansikte, hår, skägg, hatt, glasögon, kläder, accessoarer. Börja med ”Individen är” eller ”har”. Max 175 tecken."
 }
+-- and on server/main.lua 
+local AIKey= 'your gemini api key'
 ```
 
 ---
