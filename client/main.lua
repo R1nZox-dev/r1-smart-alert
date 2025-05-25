@@ -66,7 +66,7 @@ local function CaptureMugshot()
     Log("Attempting to capture mugshot")
 
     local success, result = pcall(function()
-        return exports["MugShotBase64"]:GetMugShotBase64(PlayerPedId(), true)
+        return exports["MugShotBase64"]:GetMugShotBase64(PlayerPedId(), false)
     end)
 
     if not success then
